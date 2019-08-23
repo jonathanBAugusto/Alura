@@ -1,20 +1,129 @@
-<?php declare(strict_types=1);
-echo "<pre>";
-require_once "ArrayUtils.php";
+<?php
 
-$correntistas_e_compras = [
-    "Maria",
-    12,
+require "autoload.php";
+
+use Alura\ArrayUtils;
+
+$correntistas = [
     "Giovanni",
-    25,
+    "João",
+    "Maria",
     "Luis",
     "Luisa",
-    "12"
+    "Rafael"
 ];
 
-ArrayUtils::remover(12, $correntistas_e_compras);
+$saldos = [
+    2500,
+    3000,
+    4400,
+    1000,
+    8700,
+    9000
+];
+//  adiciona os arrays em um unico array  [array1[0], array1[1], array2[0], array2[1]]
+//  $relacionados = array_merge($correntistas, $saldos);
+//  combina os arrays em um unico array associativo, [array1[0]] => [array2[0], ...]
+$relacionados = array_combine($correntistas, $saldos);
 
-echo json_encode($correntistas_e_compras);
+if (array_key_exists("João", $relacionados)) {
+    echo "O saldo do Joao é: {$relacionados["João"]}";
+} else {
+    echo "Não foi encontrado";
+}
+
+echo json_encode(ArrayUtils::encontrarPessoasComSaldoMaior(3000, $relacionados));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $correntistas = [
+//     "Giovanni",
+//     "João",
+//     "Maria",
+//     "Luis",
+//     "Luisa",
+//     "Rafael"
+//   ];
+
+//   $correntistasNaoPagantes = [
+//     "Luis",
+//     "Luisa",
+//     "Rafael",
+//   ];
+
+//   $correntistasPagantes = array_diff($correntistas, $correntistasNaoPagantes);
+
+//   echo "<pre>";
+//   var_dump($correntistasPagantes);
+//   echo "</pre>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// declare(strict_types=1);
+
+// use Alura\ArrayUtils;
+
+// require_once "autoload.php";
+
+// echo "<pre>";
+
+// $correntistas_e_compras = [
+//     "Maria",
+//     12,
+//     "Giovanni",
+//     25,
+//     "Luis",
+//     "Luisa",
+//     "12"
+// ];
+
+// ArrayUtils::remover(12, $correntistas_e_compras);
+
+// echo json_encode($correntistas_e_compras);
 
 
 

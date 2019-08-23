@@ -1,5 +1,7 @@
 <?php
 
+namespace Alura;
+
 class Calculadora
 {
     static function calculaMedia(array $notas)
