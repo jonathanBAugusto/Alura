@@ -12,7 +12,7 @@ namespace CS_1_PrimeiroProjeto
         {
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("Press ENTER or RETURN to exit...");
             Console.ReadLine();
         }
     }

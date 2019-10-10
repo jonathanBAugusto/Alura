@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_1_PrimeiroProjeto", "CS_1_PrimeiroProjeto\CS_1_PrimeiroProjeto.csproj", "{B7CDECB6-8880-4AB0-ADAC-30D77338CAFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_2_CriandoVariaveis", "CS_2_CriandoVariaveis\CS_2_CriandoVariaveis.csproj", "{D19F0FE8-E67A-4EFF-9913-3AFF6277C1B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_3_CriandoVariaveisPontoFlutuante", "CS_3_CriandoVariaveisPontoFlutuante\CS_3_CriandoVariaveisPontoFlutuante.csproj", "{F6E74F60-F125-4C4C-947F-73F5FF0A85F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B7CDECB6-8880-4AB0-ADAC-30D77338CAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7CDECB6-8880-4AB0-ADAC-30D77338CAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CDECB6-8880-4AB0-ADAC-30D77338CAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19F0FE8-E67A-4EFF-9913-3AFF6277C1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19F0FE8-E67A-4EFF-9913-3AFF6277C1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19F0FE8-E67A-4EFF-9913-3AFF6277C1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19F0FE8-E67A-4EFF-9913-3AFF6277C1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E74F60-F125-4C4C-947F-73F5FF0A85F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E74F60-F125-4C4C-947F-73F5FF0A85F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E74F60-F125-4C4C-947F-73F5FF0A85F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E74F60-F125-4C4C-947F-73F5FF0A85F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
