@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7356F57-FB75-42FB-9DEA-56E97ABD3436}</ProjectGuid>
+    <ProjectGuid>{C1EA6BEE-C9A7-473E-AEE7-DC880787D3DE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CS_10_CalculaPoupanca</RootNamespace>
-    <AssemblyName>CS_10_CalculaPoupanca</AssemblyName>
+    <RootNamespace>P2_07_ByteBank</RootNamespace>
+    <AssemblyName>P2_07_ByteBank</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ContaCorrente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

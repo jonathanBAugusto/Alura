@@ -13,8 +13,8 @@ namespace P2_06_ByteBank
             Console.WriteLine("Executando o Projeto 06");
 
             ContaCorrente conta = new ContaCorrente();
-            conta.saldo = -10;
-            Console.WriteLine(conta.saldo);
+            conta.Saldo = -10;
+            Console.WriteLine(conta.Saldo);
 
             Console.ReadLine();
         }

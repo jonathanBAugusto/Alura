@@ -1,7 +1,8 @@
-﻿namespace P2_06_ByteBank
+﻿namespace P2_07_ByteBank
 {
     class ContaCorrente
     {
+        public static int TotalDeContasCriadas { get; private set; }
         private Cliente _titular;
 
         public Cliente Titular
@@ -10,10 +11,10 @@
             set { _titular = value; }
         }
 
-        public int _agencia;
-        public int Agencia { get => _agencia; set { _agencia = value; } }
-        public int _numero;
-        public int Numero { get => _numero; set { _numero = value; } }
+        private int _agencia;
+        public int Agencia { get => _agencia; set { if (value > 0) _agencia = value; } }
+        private int _numero;
+        public int Numero { get => _numero; set { if (value > 0) _numero = value; } }
         private double saldo = 100;
 
         public double Saldo
@@ -21,9 +22,16 @@
             get => saldo;
             set
             {
-                if (value >= 0)
+                if (value > 0)
                     saldo = value;
             }
+        }
+
+        public ContaCorrente(int agencia, int numero)
+        {
+            Agencia = agencia;
+            Numero = numero;
+            TotalDeContasCriadas++;
         }
 
         public bool Sacar(double valor)
