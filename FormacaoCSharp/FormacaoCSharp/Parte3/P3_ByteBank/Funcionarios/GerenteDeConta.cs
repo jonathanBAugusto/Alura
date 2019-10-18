@@ -7,22 +7,21 @@ using System.Threading.Tasks;
 
 namespace P3_ByteBank.Funcionarios
 {
-    public class Diretor : FuncionarioAutenticavel
+    public class GerenteDeConta : FuncionarioAutenticavel
     {
-        public Diretor(string cpf) : base(cpf: cpf, salario: 5000)
+        public GerenteDeConta(string cpf) : base(cpf, 4000)
         {
         }
 
         public override void AumentarSalario()
         {
-            Salario *= 1.15;
+            Salario *= 1.05;
         }
 
         public override double GetBonificacao()
         {
-            return Salario * 0.5;
+            return Salario * 0.25;
         }
 
-        ~Diretor() { Console.WriteLine("Destruido " + Nome); }
     }
 }

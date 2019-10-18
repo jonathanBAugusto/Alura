@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P3_ByteBank
 {
-    class GerenciadorBonificacao
+    public class GerenciadorBonificacao
     {
         private static double _totalBonificacao;
         public void Registrar(Funcionario funcionario)

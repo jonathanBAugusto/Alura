@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace P3_ByteBank.Funcionarios
 {
 
-    class Funcionario
+    public abstract class Funcionario
     {
         public static int TotalDeFuncionarios { get; private set; }
         public string Nome { get; set; }
@@ -16,19 +16,16 @@ namespace P3_ByteBank.Funcionarios
 
         public Funcionario(string cpf, double salario)
         {
-            Console.WriteLine("Funcionario Instanciado");
+            Console.WriteLine((this.GetType().ToString() != null && this.GetType().ToString() != "" && this.GetType().ToString().Contains(".")) ? this.GetType().ToString().Split('.').LastOrDefault() + " Instanciado" : "Sem tipo definido");
             Cpf = cpf;
             Salario = salario;
             TotalDeFuncionarios++;
         }
 
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+        public abstract void AumentarSalario();
+
+        public abstract double GetBonificacao();
 
         ~Funcionario() { Console.WriteLine("Destruido " + Nome); }
-
-        public virtual double GetBonificacao() => Salario * 0.10;
     }
 }
