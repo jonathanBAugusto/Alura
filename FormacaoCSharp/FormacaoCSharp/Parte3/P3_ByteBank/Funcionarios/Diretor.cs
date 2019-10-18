@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace P3_ByteBank.Funcionarios
 {
-    class Diretor
+    class Diretor : Funcionario
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-
-        public double GetBonificacao()
+        public Diretor(string cpf, double salario) : base(cpf: cpf, salario: salario)
         {
-            return Salario;
-
+            Console.WriteLine("Funcionario Instanciado");
         }
+
+        public override void AumentarSalario()
+        {
+            Salario *= 1.15;
+        }
+
+        public override double GetBonificacao()
+        {
+            return Salario + base.GetBonificacao();
+        }
+
+        ~Diretor() { Console.WriteLine("Destruido " + Nome); }
     }
 }

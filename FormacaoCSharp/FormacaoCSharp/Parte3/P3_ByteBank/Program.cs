@@ -1,9 +1,9 @@
-﻿using P3_ByteBank.Funcionarios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P3_ByteBank.Funcionarios;
 
 namespace P3_ByteBank
 {
@@ -14,19 +14,13 @@ namespace P3_ByteBank
             GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
 
-            Funcionario carlos = new Funcionario();
-
+            Funcionario carlos = new Funcionario(cpf: "192.168.112-36", salario: 2000);
             carlos.Nome = "Carlos";
-            carlos.Cpf = "192.168.112-36";
-            carlos.Salario = 2000;
-
+            carlos.AumentarSalario();
             gerenciador.Registrar(carlos);
 
-            Diretor roberta = new Diretor();
-
+            Diretor roberta = new Diretor(cpf: "898.168.112-36", salario: 5000);
             roberta.Nome = "Roberta";
-            roberta.Cpf = "898.168.112-36";
-            roberta.Salario = 5000;
 
             gerenciador.Registrar(roberta);
 
@@ -35,6 +29,9 @@ namespace P3_ByteBank
             Console.WriteLine(roberta.Nome);
             Console.WriteLine(roberta.GetBonificacao());
             Console.WriteLine(gerenciador.GetTotalBonificacao());
+
+            Console.WriteLine("Total de Funcionarios: " + Funcionario.TotalDeFuncionarios);
+            
             Console.ReadKey();
         }
     }
