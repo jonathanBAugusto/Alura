@@ -1,6 +1,6 @@
 {
-    "forma_de_pagamento":"payfast",
     "valor":98.53 ,
     "moeda":"USD",
+    "forma_de_pagamento":"payfast",
     "descricao":"criando um pagamento"
 }

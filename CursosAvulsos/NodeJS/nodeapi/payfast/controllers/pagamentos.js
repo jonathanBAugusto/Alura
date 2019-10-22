@@ -33,7 +33,8 @@ module.exports = (app) => {
                     resp.status(500).send(error);
                 } else {
                     console.log('pagamento Criado');
-                    resp.json(pagamento);
+                    resp.location('/pagamentos/pagamento/' + result.insertId);
+                    resp.status(201).json(pagamento);
                 }
             });
         } catch (error) {
