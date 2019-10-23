@@ -41,4 +41,22 @@ module.exports = (app) => {
             resp.send(error);
         }
     });
+    app.put('/pagamentos/pagamento/:id',[],(req, resp)=>{
+        let pagamento = {};
+        let id = req.params.id;
+
+        pagamento.id = id;
+        pagamento.status = 'CONFIRMADO';
+
+        let connection = app.persistencia.connectionFactory();
+        let pagamentoDao = new app.persistencia.PagamentoDao(connection);
+
+        pagamentoDao.atualiza(pagamento, (erro)=>{
+            if(erro){
+                response.status(500).send(erro);
+                return;
+            }
+            resp.send(pagamento);
+        });
+    });
 }
