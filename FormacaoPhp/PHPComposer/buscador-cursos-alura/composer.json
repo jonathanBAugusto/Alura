@@ -24,17 +24,17 @@
         "squizlabs/php_codesniffer": "*",
         "phan/phan": "^2.4"
     },
-    "scripts": {
-        "test": "phpunit tests\\TestBuscadorDeCursos.php",
-        "cs": "phpcs -- standard=PSR12",
-        "clear-cache": "del cache",
+    "scripts":{
+        "test": "phpunit tests\\TesteBuscadorDeCursos.php",
+        "cs": "phpcs --standart=PSR12 src/",
+        "phan": "phan -- allow-polyfill-parser",
         "check": [
-            "@phan",
+            "@test",
             "@cs",
-            "@test"
+            "@phan"
         ]
     },
     "scripts-descriptions": {
-        "check": "Roda as verificações do código. PHAN, PGFPCS e PGPUNITY"
+        "check": "Roda as verificalções do código. PHAN, PHPCS e PHPUNIT"
     }
 }
