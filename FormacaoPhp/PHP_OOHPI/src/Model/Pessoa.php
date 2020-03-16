@@ -1,4 +1,7 @@
 <?php
+
+namespace src\Model;
+
 class Pessoa
 {
     private $nome;
@@ -16,9 +19,9 @@ class Pessoa
         return $this->nome;
     }
 
-    public function getCpf()
+    public function getCpf(): string
     {
-        $this->cpf->recuperaNumero();
+        return $this->cpf->recuperaNumero();
     }
 
     protected function validaNomeTitular(string $nomeTitular)

@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Model;
+
 class Endereco
 {
     private $cidade;

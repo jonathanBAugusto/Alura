@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Model\Conta;
+
 class Conta
 {
     private $titular;
@@ -19,17 +21,19 @@ class Conta
         self::$numeroDeContas--;
     }
 
-    public function saca(float $valorASacar): void
+    public function sacar(float $valorASacar): void
     {
-        if ($valorASacar > $this->saldo) {
+        $tarifaSaque = $valorASacar * 0.05;
+        $valorSaque = $valorASacar + $tarifaSaque;
+        if ($valorSaque > $this->saldo) {
             echo "Saldo indisponível";
             return;
         }
 
-        $this->saldo -= $valorASacar;
+        $this->saldo -= $valorSaque;
     }
 
-    public function deposita(float $valorADepositar): void
+    public function depositar(float $valorADepositar): void
     {
         if ($valorADepositar < 0) {
             echo "Valor precisa ser positivo";
@@ -57,12 +61,12 @@ class Conta
 
     public function recuperaNomeTitular(): string
     {
-        return $this->titular->recuperaNome();
+        return $this->titular->getNome();
     }
 
     public function recuperaCpfTitular(): string
     {
-        return $this->titular->recuperaCpf();
+        return $this->titular->getCpf();
     }
 
     public static function recuperaNumeroDeContas(): int

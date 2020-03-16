@@ -1,5 +1,13 @@
 <?php
 
+namespace src\Model\Conta;
+
+use src\Model\{
+    CPF,
+    Endereco,
+    Pessoa,
+};
+
 class Titular extends Pessoa
 {
     private $endereco;
